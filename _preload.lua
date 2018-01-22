@@ -70,7 +70,7 @@
 	}
 
 	configuration { "**.cu" }
-		language p.CUDA
+		language(p.CUDA)
 --		toolset "nvcc"
 	configuration {}
 
