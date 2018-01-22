@@ -2,6 +2,13 @@
 	local p = premake
 
 --
+--	Set default CUDA version if "cuda_version" is not set before including this module 
+--
+	if cuda_version == nil then
+		cuda_version = "8.0"
+	end
+
+--
 -- always include _preload so that the module works even when not embedded.
 --
 	if premake.extensions == nil or premake.extensions.cuda == nil then

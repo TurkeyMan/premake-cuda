@@ -39,7 +39,7 @@
 
 
 	function m.cudaProps(prj)
-		p.w("<Import Project=\"$(CUDAPropsPath)\\CUDA 8.0.props\" />")
+		p.w("<Import Project=\"$(CUDAPropsPath)\\CUDA " .. cuda_version .. ".props\" />")
 	end
 	p.override(vc2010.elements, "importExtensionSettings", function(oldfn, prj)
 		local importExtensionSettings = oldfn(prj)
@@ -72,7 +72,7 @@
 	end)
 
 	function m.cudaTargets(prj)
-		p.w("<Import Project=\"$(CUDAPropsPath)\\CUDA 8.0.targets\" />")
+		p.w("<Import Project=\"$(CUDAPropsPath)\\CUDA " .. cuda_version .. ".targets\" />")
 	end
 	p.override(vc2010.elements, "importExtensionTargets", function(oldfn, prj)
 		local targets = oldfn(prj)
